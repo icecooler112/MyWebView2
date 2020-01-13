@@ -1,0 +1,72 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+//		int x=5;
+//		for(int i=1;i<=x;i++){
+//			for(int j=i;j<=x+1;j++){
+//				System.out.print(" ");
+//			}
+//			for(int j=1;j<=i*2-1;j++){
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		}
+//		for(int i=1;i<x;i++){
+//			for(int j=1;j<=i+2;j++){
+//				System.out.print(" ");
+//			}
+//			for(int j=i;j<=(x-1)*2-i;j++){
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		}
+//	}
+//}
+
+
+        int mn;
+        while (true) {
+            try {
+                Scanner in = new Scanner(System.in);
+                System.out.print("Money to chang : ");
+                mn = in.nextInt();
+                if (mn >= 0) break;
+            } catch (Exception e) {
+            }
+        }
+        int[] pay = new int[8];
+
+        int[] numpay = new int[]{1000,500, 100, 50, 20, 10, 5, 1};
+        for (int i = 0; i < pay.length; i++) {
+            pay[i] = mn / numpay[i];
+            mn = mn % numpay[i];
+        }
+        System.out.println("1000 Bath is : " + pay[0]);
+        System.out.println("500 Bath is : " + pay[1]);
+        System.out.println("100 Bath is : " + pay[2]);
+        System.out.println("50 Bath is : " + pay[3]);
+        System.out.println("20 Bath is : " + pay[4]);
+        System.out.println("10 Bath is : " + pay[5]);
+        System.out.println("5 Bath is : " + pay[6]);
+        System.out.println("1 Bath is : " + pay[7]);
+
+}
+		}
+
+
+//		int n;
+//		Scanner sc = new Scanner(System.in);
+//		System.out.print("Input num : ");
+//		n = sc.nextInt();
+//		String str = "";
+//		for (int i = 1; i <= n; i++) {
+//			for (int j = 1; j <= n-i; j++) {
+//				System.out.print(" ");
+//			}
+//			str = (i % 2) + " " + str;
+//			System.out.println(str);
+//		}
+//
+//	}
